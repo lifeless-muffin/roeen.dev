@@ -1,0 +1,47 @@
+/* -------------------------------------------------------
+>>> TABLE OF CONTENT 
+----------------------------------------------------------
+
+    1. The Great Reset (CSS RESET) 
+    2. CSS Variable Declaration
+    3. Document Setup
+    4. Media Queries (Breakpoint Declaration)
+
+--------------------------------------------------------*/
+
+
+/*--------------------------------------------------------
+
+    1. The Great Reset (CSS RESET) 
+
+---------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------
+
+    2. Document Setup
+
+---------------------------------------------------------*/
+
+:root {
+    --p-background: #111111;
+    --p-gradient-blue: #A1C4FD;
+    --p-gradient-light-blue: #C2E9FB;
+    --p-gradient-light-yellow: #FFECD2;
+    --p-gradient-light-pink: #FCB69F;
+
+    /* TEXT STYLES */
+    
+    --text-black: #111111;
+    --text-white: #FFFFFF;
+    --p-text-color: #DCDADA;
+    --s-text-color: #CBC7C7;    
+
+    --p-heading-font: 'Mulish', 'Montserrat', 'sans-serif';
+    --p-text-font: 'Ropeman', 'sans-serif';
+
+    /* GLOBAL COMPONENTS */
+
+    --p-button-bg: #222222;
+}
