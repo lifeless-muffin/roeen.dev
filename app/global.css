@@ -2,13 +2,21 @@
 >>> TABLE OF CONTENT 
 ----------------------------------------------------------
 
-    1. The Great Reset (CSS RESET) 
-    2. CSS Variable Declaration
-    3. Document Setup
-    4. Media Queries (Breakpoint Declaration)
+  0. Importing Utilities
+  1. The Great Reset (CSS RESET) 
+  2. CSS Variable Declaration
+  3. Document Setup
+  4. Media Queries (Breakpoint Declaration)
 
 --------------------------------------------------------*/
 
+/*--------------------------------------------------------
+
+    0. Importing Utilities
+
+---------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400&family=Montserrat:wght@300;400;500;600&family=Mulish:wght@300;400;500;600&display=swap');
 
 /*--------------------------------------------------------
 
@@ -16,6 +24,49 @@
 
 ---------------------------------------------------------*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
 
 /*--------------------------------------------------------
@@ -25,23 +76,102 @@
 ---------------------------------------------------------*/
 
 :root {
-    --p-background: #111111;
-    --p-gradient-blue: #A1C4FD;
-    --p-gradient-light-blue: #C2E9FB;
-    --p-gradient-light-yellow: #FFECD2;
-    --p-gradient-light-pink: #FCB69F;
+  --p-background: #111111;
+  --p-gradient-blue: #A1C4FD;
+  --p-gradient-light-blue: #C2E9FB;
+  --p-gradient-light-yellow: #FFECD2;
+  --p-gradient-light-pink: #FCB69F;
 
-    /* TEXT STYLES */
-    
-    --text-black: #111111;
-    --text-white: #FFFFFF;
-    --p-text-color: #DCDADA;
-    --s-text-color: #CBC7C7;    
+  /* TEXT AND FONT STYLES */
+  
+  --text-black: #111111;
+  --text-white: #FFFFFF;
+  --p-text-color: #DCDADA;
+  --s-text-color: #CBC7C7;    
+  --nav-text: #383737;
+  --nav-text-hovered: var(--text-black);
 
-    --p-heading-font: 'Mulish', 'Montserrat', 'sans-serif';
-    --p-text-font: 'Ropeman', 'sans-serif';
+  --p-brand-font: 'Mulish', 'Montserrat', 'sans-serif';
+  --p-text-font: 'Ropeman', 'sans-serif';
 
-    /* GLOBAL COMPONENTS */
+  /* body font size */
+  --text-base-size: 1em;
 
-    --p-button-bg: #222222;
+  /* type scale */
+  --text-scale-ratio: 1.2;
+  --text-xs: calc((var(--text-base-size) / var(--text-scale-ratio)) / var(--text-scale-ratio));
+  --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
+  --text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
+  --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
+  --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
+  --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
+
+  /* GLOBAL COMPONENTS */
+
+  --p-button-bg: #222222;
+
+
+  /* SPACE UNITS */
+  --space-unit: 1em;
+  --space-xs:   calc(0.5 * var(--space-unit));
+  --space-sm:   calc(0.75 * var(--space-unit));
+  --space-md:   calc(1.25 * var(--space-unit));
+  --space-lg:   calc(2 * var(--space-unit));
+  --space-xl:   calc(3.25 * var(--space-unit));
+
+}
+
+/* UTILITY CLASSES */ 
+
+/* texrt size util classes - apply sizing variables */ 
+.text-xxl   { font-size: var(--text-xxl, 2.074em); }
+h2, .text-xl    { font-size: var(--text-xl, 1.728em); }
+h3, .text-lg    { font-size: var(--text-lg, 1.44em); }
+h4, .text-md    { font-size: var(--text-md, 1.2em); }
+.text-base      { font-size: var(--text-base-size); }
+small, .text-sm { font-size: var(--text-sm, 0.833em); }
+.text-xs        { font-size: var(--text-xs, 0.694em); }
+
+/* margin and padding util classes - apply spacing variables */
+.margin-xs { margin: var(--space-xs); }
+.margin-sm { margin: var(--space-sm); }
+.margin-md { margin: var(--space-md); }
+.margin-lg { margin: var(--space-lg); }
+.margin-xl { margin: var(--space-xl); }
+/* ----------------------------------------------------------*/
+.padding-xs { padding: var(--space-xs); }
+.padding-sm { padding: var(--space-sm); }
+.padding-md { padding: var(--space-md); }
+.padding-lg { padding: var(--space-lg); }
+.padding-xl { padding: var(--space-xl); }
+
+/* Container Util Classes */
+.u-flex {display: flex;}
+.u-width-block {width: 100%;}
+.u-flex-centered {justify-content: center; align-items: center;}
+.u-hide-list-style {list-style: none;}
+
+
+/*--------------------------------------------------------
+
+    3. DOCUMENT SETUP
+
+---------------------------------------------------------*/
+
+body, html {
+  box-sizing: border-box;
+  background-color: var(--p-background);
+}
+
+/*--------------------------------------------------------
+
+    4. MEDIA QUERIES
+
+---------------------------------------------------------*/
+
+@media (min-width: 64rem) { /* responsive decision applied to all text elements */
+  :root {
+    --text-base-size: 1.25em;
+    --text-scale-ratio: 1.25;
+  }
 }

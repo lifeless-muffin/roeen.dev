@@ -1,0 +1,32 @@
+.header {
+  position: absolute;
+  top: 0px;
+  left: 0px; 
+  right: 0px;
+  z-index: 999;
+}
+
+.header_wrapper {
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.header__nav_list {
+  row-gap: 20px;
+}
+
+.header__nav_item {
+  width: fit-content;
+  padding: 20px 20px;
+}
+
+.header__nav_text {
+  font-weight: 500;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.0975rem;
+  text-transform: uppercase;
+  font-family: var(--p-brand-font);
+  color: var(--nav-text);
+}
+

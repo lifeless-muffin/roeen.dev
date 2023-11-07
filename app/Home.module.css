@@ -1,0 +1,11 @@
+.home_wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero_section {
+  height: 50%;
+  padding-bottom: 3rem;
+  align-items: flex-end;
+}
