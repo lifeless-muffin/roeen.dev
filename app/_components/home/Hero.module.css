@@ -1,13 +1,16 @@
 .hero_section {
-  height: 60%;
-  padding-bottom: 3rem;
+  height: 65dvh;
   align-items: flex-end;
 }
 
 .hero__feature_wrapper {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   width: 100%;
   height: 100%;
+  padding-bottom: 50px;
 }
 
 .hero__gradient {
@@ -26,12 +29,30 @@
   --gradient-color-3:#ffecd2;
   --gradient-color-4:#fcb69f;
 
+
   height: 100%; 
   width: 100%; 
-  z-index: 1;
+  z-index: 0;
 }
 
-.hero__vector_wrapper, .hero__vector {
-  background: red;
+.hero__vector_wrapper{
+  position: relative;
+  z-index: 1;
+  width: 90%;
+  max-width: 1064px;
+  height: fit-content;
+}
+
+.hero__vector {
+  width: 100%;
+  height: auto;
+}
+
+.hero__gradient_grained {
+  position: absolute!important;
+  top: 0px; 
+  left: 0px; 
+  right: 0px;
+  bottom: 0px;
   z-index: 2;
 }

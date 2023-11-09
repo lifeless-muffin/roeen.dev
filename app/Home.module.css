@@ -4,8 +4,15 @@
   overflow: hidden;
 }
 
-.hero_section {
-  height: 50%;
-  padding-bottom: 3rem;
-  align-items: flex-end;
+.landing__content_wrapper {
+  width: 90%;
+  max-width: 1064px;
+}
+
+.landing__text_p {
+  color: var(--p-text-color);
+  font-family: var(--p-brand-font);
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
 }

@@ -1,0 +1,3 @@
+.next__app::before {
+  z-index: 2;
+}
