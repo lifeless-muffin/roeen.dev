@@ -1,0 +1,16 @@
+.landing__content_wrapper {
+  width: 90%;
+  max-width: 1064px;
+}
+
+.landing__text_p {
+  color: var(--p-text-color);
+  font-family: var(--p-brand-font);
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+}
+
+.std_wrapper {
+  width: clamp(3.75rem, calc(3.75rem + ((1vw - 0.3rem) * 7.2144)), 6rem);
+}

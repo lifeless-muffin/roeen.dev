@@ -23,14 +23,15 @@ export default function HeroSection() {
         <div className={HeroStyles.hero__gradient + ' hero__gradient w-full'}>
           <canvas className={HeroStyles.hero__gradient_canvas + ' hero__gradient-canvas'} id="hero__gradient-canvas" data-transition-in></canvas>
         </div>
-        <div className={HeroStyles.hero__vector_wrapper + ' hero__vector-wrapper'}>
+        <div unselectable='on' className={HeroStyles.hero__vector_wrapper + ' hero__vector-wrapper'}>
           <Image 
             draggable={false}
             src={heroVector}
             width={1016}
             height={316}
-            className={HeroStyles.hero__vector + " hero__vector"}
+            className={HeroStyles.hero__vector + " hero__vector select-none"}
             alt="Mansoor-Roeen | Mansoor Roeen SVG"
+            unselectable='on'
           />
         </div>
       </div>
