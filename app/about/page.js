@@ -1,4 +1,4 @@
 export default function About() {
-    return (<div>this is me</div>)
+    return (<div>This is about page</div>)
   }
   
